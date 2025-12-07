@@ -8,6 +8,13 @@ type TodoItem = {
 
 const API_URL = 'http://localhost:3001/todos';
 
+/**
+ * Renders the Json-Server Todo Playground page with a full CRUD UI and server syncing.
+ *
+ * Displays a sorted list of todos fetched from the configured API and provides controls to add, edit, toggle completion, and delete items. Updates are applied optimistically to local state and sent to the server; loading and error messages are shown and a manual reload from the server is available.
+ *
+ * @returns The React element representing the todo page UI.
+ */
 export default function HomePage() {
   const [todoList, setTodoList] = useState<any[]>([]);
   const [newTodoText, setNewTodoText] = useState<string>('');
